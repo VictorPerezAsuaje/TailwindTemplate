@@ -10,12 +10,12 @@ This is a sample pre-configured VS2022 template based on the Writer's Den projec
 6. Support for HTMX & SweetAlert for notifications
 
 ### Menu open
-![dark sample](/sample-dark.jpg)
-![dark sample](/sample-light.jpg)
+![dark sample](/Docs/sample-dark.jpg)
+![dark sample](/Docs/sample-light.jpg)
 
 ### Menu closed
-![dark sample](/sample-dark-2.jpg)
-![dark sample](/sample-light-2.jpg)
+![dark sample](/Docs/sample-dark-2.jpg)
+![dark sample](/Docs/sample-light-2.jpg)
 
 
 ## Configuration
