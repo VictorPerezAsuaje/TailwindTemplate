@@ -1,0 +1,48 @@
+﻿@{
+    string theme = "dark";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    @await RenderSectionAsync("Metatags", required: false)
+
+    @await RenderSectionAsync("Styles", required: false)
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body hx-boost="true" hx-swap='innerHTML show:no-scroll' data-theme="@theme">
+    <div id="notificationWrapper"
+         hx-get="/Notify"
+         hx-swap="innerHTML"
+         hx-trigger="notification-added from:body">
+        <partial name="Partials/_Notification" />
+    </div>
+
+    <div class="flex bg-dark text-light ">
+        <partial name="Partials/_Sidebar" />        
+
+        <section role="main" class="h-screen overflow-y-scroll flex-1 md:flex-[2] lg:flex-[5]">
+            <partial name="Partials/_Menu" />
+
+            <main role="main" class="p-4 md:p-6 lg:p-10">
+                @RenderBody()
+            </main>            
+        </section>
+    </div>
+        
+    <partial name="Partials/_Footer" />
+
+    <script src="~/js/site.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

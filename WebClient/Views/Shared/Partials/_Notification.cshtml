@@ -1,0 +1,37 @@
+﻿@using System.Text.Json
+@using WebClient.Utilities
+
+@{
+    string json = TempData["Notification"] as string;
+
+    if (string.IsNullOrWhiteSpace(json))
+        return;
+
+    Notification? notification = JsonSerializer.Deserialize<Notification>(json);
+
+    if (notification is null)
+        return;
+}
+
+<script id="notificationScript" type="text/javascript">
+    (
+        function () {
+            const swalConfig = Swal.mixin({
+                customClass: {
+                    confirmButton: 'bg-primary border-primary py-2 px-3 rounded text-dark uppercase font-bold outline-none hover:bg-primary-dark',
+                    cancelButton: 'bg-secondary border-secondary py-2 px-3 rounded text-dark uppercase font-bold outline-none hover:bg-secondary-dark'
+                },
+                buttonsStyling: false
+            })
+
+            swalConfig.fire({
+                title: '@notification.Title',
+                html: `@Html.Raw(notification.Message)`,
+                icon: '@notification.Icon',
+                iconColor: '@notification.IconColor',
+            });
+
+            document.getElementById("notificationScript").remove();
+        }
+    )()
+</script>

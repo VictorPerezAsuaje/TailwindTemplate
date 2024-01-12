@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{B6E820D6-B284-4F8C-839A-D05DC3EFB699}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FAAA69F4-061D-45CB-B465-09BB061A99C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{7A932FD2-34F9-490A-8DA0-2331C630B5AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{2D939F20-73BC-47E4-A81F-4822D051B69D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8A173CD4-1107-4C90-8E0C-71286D094A36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{06FF3B6C-44F3-45C4-9A77-93B710050E78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailwindTemplate.Domain", "Layers\Domain\TailwindTemplate.Domain\TailwindTemplate.Domain.csproj", "{A5480026-B3E6-49E7-9F53-46417EA55848}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailwindTemplate.Infrastructure", "Layers\Infrastructure\TailwindTemplate.Infrastructure\TailwindTemplate.Infrastructure.csproj", "{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TailwindTemplate.Application", "Layers\Application\TailwindTemplate.Application\TailwindTemplate.Application.csproj", "{7AB0FD4E-FF43-4BA6-BB10-67B83593D543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B2D2AF63-41DB-4E44-8458-5881E50B5BE0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Docs\sample-dark-2.JPG = Docs\sample-dark-2.JPG
+		Docs\sample-dark.JPG = Docs\sample-dark.JPG
+		Docs\sample-light-2.JPG = Docs\sample-light-2.JPG
+		Docs\sample-light.JPG = Docs\sample-light.JPG
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layers", "Layers", "{E397AE02-781E-441C-82EF-8F88790D91EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E820D6-B284-4F8C-839A-D05DC3EFB699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E820D6-B284-4F8C-839A-D05DC3EFB699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E820D6-B284-4F8C-839A-D05DC3EFB699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E820D6-B284-4F8C-839A-D05DC3EFB699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAA69F4-061D-45CB-B465-09BB061A99C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAA69F4-061D-45CB-B465-09BB061A99C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAA69F4-061D-45CB-B465-09BB061A99C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAA69F4-061D-45CB-B465-09BB061A99C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5480026-B3E6-49E7-9F53-46417EA55848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5480026-B3E6-49E7-9F53-46417EA55848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5480026-B3E6-49E7-9F53-46417EA55848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5480026-B3E6-49E7-9F53-46417EA55848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AB0FD4E-FF43-4BA6-BB10-67B83593D543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB0FD4E-FF43-4BA6-BB10-67B83593D543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB0FD4E-FF43-4BA6-BB10-67B83593D543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB0FD4E-FF43-4BA6-BB10-67B83593D543}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAAA69F4-061D-45CB-B465-09BB061A99C8} = {7A932FD2-34F9-490A-8DA0-2331C630B5AD}
+		{2D939F20-73BC-47E4-A81F-4822D051B69D} = {E397AE02-781E-441C-82EF-8F88790D91EF}
+		{8A173CD4-1107-4C90-8E0C-71286D094A36} = {E397AE02-781E-441C-82EF-8F88790D91EF}
+		{06FF3B6C-44F3-45C4-9A77-93B710050E78} = {E397AE02-781E-441C-82EF-8F88790D91EF}
+		{A5480026-B3E6-49E7-9F53-46417EA55848} = {06FF3B6C-44F3-45C4-9A77-93B710050E78}
+		{B8900BFD-9F74-44C8-9C64-6E5BA88BEE03} = {8A173CD4-1107-4C90-8E0C-71286D094A36}
+		{7AB0FD4E-FF43-4BA6-BB10-67B83593D543} = {2D939F20-73BC-47E4-A81F-4822D051B69D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A03025A8-D8A9-48CE-BC59-F869A20C16AA}
+	EndGlobalSection
+EndGlobal

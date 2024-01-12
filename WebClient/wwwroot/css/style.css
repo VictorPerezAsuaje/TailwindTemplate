@@ -1,0 +1,91 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url("components/sidebar.css");
+
+:root {
+    --success: #10b981;
+    --error: #f43f5e;
+    --warning: #f59e0b;
+    --info: #06b6d4;
+}
+
+body,
+body[data-theme="dark"] {
+    --p: #c1c5eb;
+    --pa: #7480ff;
+    --s: #ebbce0;
+    --sa: #ff52d9;
+    --a: #bee9e4;
+    --aa: #00cdb7;
+    --xl: #eeeeee;
+    --l: #a6adbb;
+    --n: #2a323c;
+    --bg: #1d232a;
+    --chevron-right: url("data:image/svg+xml,%3Csvg fill='%23a6adbb' width='1.25rem' height='1.25rem' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z' /%3E%3C/svg%3E");
+}
+
+    body[data-theme="light"] {
+        --p: #7480ff;
+        --pd: #050617;
+        --s: #ff52d9;
+        --sd: #190211;
+        --a: #00cdb7;
+        --ad: #000f0c;
+        --xl: #1d232a;
+        --l: #2a323c;
+        --n: #e2e4e9;
+        --bg: #f0f0f0;
+        --chevron-right: url("data:image/svg+xml,%3Csvg fill='%231d232a' width='1.5rem' height='1.5rem' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z' /%3E%3C/svg%3E");
+    }
+
+
+body{
+    @apply bg-dark min-h-full;
+}
+
+
+/* SWEET ALERT CONFIG */
+
+/* SUCCESS */
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line],
+div:where(.swal2-icon).swal2-success [class^=swal2-x-mark-line] {
+    background-color: var(--success) !important;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+    border-color: var(--success) !important;
+}
+
+/* ERROR */
+
+div:where(.swal2-icon).swal2-error [class^=swal2-error-line],
+div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
+    background-color: var(--error) !important;
+}
+
+div:where(.swal2-icon).swal2-error .swal2-error-ring {
+    border-color: var(--error) !important;
+}
+
+/* WARNING */
+
+div:where(.swal2-icon).swal2-warning [class^=swal2-warning-line],
+div:where(.swal2-icon).swal2-warning [class^=swal2-x-mark-line] {
+    background-color: var(--warning) !important;
+}
+
+div:where(.swal2-icon).swal2-warning .swal2-warning-ring {
+    border-color: var(--warning) !important;
+}
+
+/* INFO */
+div:where(.swal2-icon).swal2-info [class^=swal2-info-line],
+div:where(.swal2-icon).swal2-info [class^=swal2-x-mark-line] {
+    background-color: var(--info) !important;
+}
+
+div:where(.swal2-icon).swal2-info .swal2-info-ring {
+    border-color: var(--info) !important;
+}

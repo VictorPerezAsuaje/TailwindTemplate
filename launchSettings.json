@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "None",
+      "composeLaunchServiceName": "tailwindtemplate",
+      "serviceActions": {
+        "tailwindtemplate": "StartDebugging",
+        "sqlserver": "StartWithoutDebugging"
+      }
+    }
+  }
+}

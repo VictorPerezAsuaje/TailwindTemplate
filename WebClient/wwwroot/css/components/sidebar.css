@@ -1,0 +1,114 @@
+﻿.sidebar {
+    @apply gap-4 flex-col h-screen fixed bg-dark z-10 w-3/4 shadow lg:static lg:flex p-5 transition-all ease-in-out duration-500;
+}
+
+    .sidebar.open {
+        @apply translate-x-0 lg:w-64;
+    }
+
+    .sidebar:not(.open) {
+        @apply -translate-x-full lg:translate-x-0 lg:w-24;
+    }
+
+        .sidebar:not(.open) .sidebar-title :first-child {
+            @apply mx-auto;
+        }
+
+        .sidebar:not(.open) .sidebar-title:after {
+            @apply lg:hidden;
+        }
+
+        .sidebar:not(.open) .sidebar-title :not(:first-child) {
+            @apply lg:hidden;
+        }
+
+
+.sidebar-logo {
+    @apply flex flex-row font-medium justify-center items-center mt-0 pb-5 mb-8 border-b-[1px] border-light;
+}
+
+.sidebar.open .sidebar-logo svg {
+    @apply w-16;
+}
+
+.sidebar:not(.open) .sidebar-logo svg {
+    @apply w-16 lg:w-8;
+}
+
+
+.sidebar-title {
+    @apply flex items-center font-bold uppercase text-sm transition-all ease-in-out duration-500;
+}
+
+.dropdown .sidebar-title::after {
+    @apply content-[var(--chevron-right)] transition-all ease-in-out origin-center duration-500 ms-auto;
+}
+
+.sidebar-title,
+.dropdown[open] .sidebar-title {
+    @apply px-4 py-2;
+}
+
+.sidebar-title:hover,
+.dropdown[open] .sidebar-title {
+    @apply bg-neutral text-light;
+}    
+
+/* DROPDOWN BEHAVIOUR */
+
+.sidebar:not(.open) .dropdown{
+    @apply cursor-none select-none pointer-events-none;
+}
+
+    .sidebar:not(.open) .dropdown .dropdown-items {
+        @apply hidden;
+    }
+
+.sidebar.open .dropdown:not([open]) .sidebar-title::after {
+    @apply rotate-90;
+}
+
+.sidebar.open .dropdown[open] .sidebar-title::after {
+    @apply -rotate-90;
+}
+
+.sidebar.open .dropdown .dropdown-items {
+    @apply pl-6 py-4 flex flex-col gap-2;
+}
+
+.sidebar.open .dropdown-items li {
+    @apply pl-0 select-none transition-all ease-in-out duration-500;
+}
+
+    .sidebar.open .dropdown-items li:before:hover,
+    .sidebar.open .dropdown-items li:before.active,
+    .sidebar.open .dropdown-items li:hover,
+    .sidebar.open .dropdown-items li.active {
+        @apply pl-2 text-extralight transition-all ease-in-out duration-500;
+    }
+
+/* MODE TOGGLER */
+
+.mode-toggler {
+    @apply cursor-pointer flex items-center justify-center mt-auto mx-auto rounded-full p-1.5 aspect-square w-fit bg-light;
+}
+
+.mode-toggler i {
+    @apply text-dark text-sm;
+}
+
+body[data-theme='light'] .mode-toggler .dark {
+    @apply hidden;
+}
+
+body[data-theme='light'] .mode-toggler .light {
+    @apply block;
+}
+
+body:not([data-theme='light']) .mode-toggler .light {
+    @apply hidden;
+}
+
+body:not([data-theme='light']) .mode-toggler .dark {
+    @apply block;
+}
